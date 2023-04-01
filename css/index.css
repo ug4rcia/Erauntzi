@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  width: 100%;
+  height: 500px;
+  background-color: black;
+}
+
+.apartados {
+  width: 100%;
+  height: 500px;
+  background-color: red;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.apartados .apartado1 {
+  grid-area: 1/1/2/2;
+}
+.apartados .apartado2 {
+  grid-area: 1/2/2/3;
+}
+.apartados .apartado3 {
+  grid-area: 2/1/3/2;
+}
+.apartados .apartado4 {
+  grid-area: 2/2/3/3;
+}
+.apartados .apartado1,
+.apartados .apartado2 {
+  font-family: Arial;
+  margin: 100px 200px;
+  font-size: 40px;
+}
+.apartados .apartado3,
+.apartados .apartado4 {
+  font-family: Arial;
+  margin: 100px 200px;
+  font-size: 40px;
+}
+.apartados .apartado1,
+.apartados .apartado2 {
+  animation: apartado1 1s;
+  animation: apartado2 1s;
+}
+.apartados .apartado3,
+.apartados .apartado4 {
+  animation: apartado3 1s;
+  animation: apartado4 1s;
+}
+@keyframes apartado1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-200%) skewX(30deg);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(-20%) skewX(-30deg);
+  }
+  80% {
+    -webkit-transform: translateX(0%) skewX(15deg);
+  }
+}
+@keyframes apartado2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-200%) skewX(30deg);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(-20%) skewX(-30deg);
+  }
+  80% {
+    -webkit-transform: translateX(0%) skewX(15deg);
+  }
+}
+@keyframes apartado3 {
+  15% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-700%) skewX(-70deg);
+    opacity: 0;
+  }
+}
+@keyframes apartado4 {
+  15% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-700%) skewX(-70deg);
+    opacity: 0;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+}
+
+.container {
+  height: 200px;
+  background: #0f9bf6;
+  position: relative;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.waves {
+  position: absolute;
+  height: 327px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  left: -180px;
+  width: 2402px;
+  height: 327px;
+  background: url(https://static.platzi.com/media/files/waves_c8551f5d-ecf6-4a81-ae1d-f3a0ad55ba10.png) center bottom no-repeat;
+  animation: 5s wave ease-in-out infinite alternate;
+}
+
+.wave.a {
+  background-position: 0 -854px;
+}
+
+.wave.b {
+  background-position: 0 -427px;
+  animation-delay: 0.6s;
+}
+
+.wave.c {
+  background-position: 0 0;
+  animation-delay: 1.2s;
+}
+
+@keyframes wave {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-80px, 30px);
+  }
+  100% {
+    transform: translate(160px, -60px);
+  }
+}/*# sourceMappingURL=index.css.map */
