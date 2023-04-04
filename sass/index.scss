@@ -5,7 +5,7 @@ body {
 
 .main {
     width: 100%;
-    height: 500px;
+    height: 760px;
     background-color: rgb(89, 89, 243);
 }
 
@@ -35,21 +35,20 @@ body {
     }
 
     .apartado1,
-    .apartado2 {
-        animation: apartado1 1s;
-        animation: apartado2 1s;
+    .apartado3 {
+        animation: slide-right 1s steps(50, start) forwards;
     }
 
-    .apartado3,
+    .apartado2,
     .apartado4 {
-        animation: apartado3 1s;
-        animation: apartado4 1s;
+        animation: slide-left 1s steps(50, start) forwards;
     }
+
     .apartado1,
     .apartado2,
     .apartado3,
-    .apartado4{
-        margin: 10px;
+    .apartado4 {
+        margin: 90px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -58,53 +57,45 @@ body {
 
 
 
-    @keyframes apartado1 {
-        from {
-            margin-left: 100%;
-            width: 100%
+    @keyframes slide-left {
+        0% {
+            transform: translateX(0);
         }
 
-        to {
-            margin-left: 0%;
-            width: 100%;
+        100% {
+            transform: translateX(-100px);
         }
     }
 
-    @keyframes apartado2 {
-        from {
-            margin-left: 100%;
-            width: 100%
+    @keyframes slide-right {
+        0% {
+            transform: translateX(0);
         }
 
-        to {
-            margin-left: 0%;
-            width: 100%;
+        100% {
+            transform: translateX(100px);
         }
     }
 
-    @keyframes apartado3 {
-        from {
-            margin-left: 0%;
-            width: 100%
-        }
+}
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 
-        to {
-            margin-left: 100%;
-            width: 100%;
-        }
-    }
 
-    @keyframes apartado4 {
-        from {
-            margin-left: 0%;
-            width: 100%
-        }
+.fadeRight {
+  opacity: 0;
+  transform: translate(10vh, 0vh);
+  transition: all 1s;
+}
 
-        to {
-            margin-left: 100%;
-            width: 100%;
-        }
-    }
+.fadeLeft {
+  opacity: 0;
+  transform: translate(-10vh, 0vh);
+  transition: all 1s;
+}
+
+.visible {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 footer {
