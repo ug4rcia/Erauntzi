@@ -9,4 +9,4 @@ $response['list']=$reserva->getList();
 $response['error']="no error"; 
 
 echo json_encode($response);
-unset ($compo);
+unset ($response);

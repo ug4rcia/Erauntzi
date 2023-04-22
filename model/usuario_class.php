@@ -2,8 +2,8 @@
 
 class usuario_class{
 
-    protected $usuario;
-    protected $contrasena;
+    public $usuario;
+    public $contrasena;
 
 
 

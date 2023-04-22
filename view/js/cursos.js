@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", (event) => {
 
+
 });
 
 const botones = document.querySelectorAll(".dias");
@@ -10,8 +11,8 @@ const cuandoSeHaceClick = function (evento) {
     // Recuerda, this es el elemento
     if (clicks < 4) {
 
-        localStorage.setItem("dia"+local,this.value);
-        local = local+1;
+        localStorage.setItem("dia" + local, this.value);
+        local = local + 1;
 
         console.log(this.value);
 
@@ -44,20 +45,50 @@ function comprobar() {
 
     if (nombre.value === "") {
         alert("Ingresa los datos correctamente")
-    }else if (apellido.value === "") {
+    } else if (apellido.value === "") {
         alert("Ingresa los datos correctamente")
-    }else if (telefono.value === "") {
+    } else if (telefono.value === "") {
         alert("Ingresa los datos correctamente")
-    }else if (email.value === "") {
+    } else if (email.value === "") {
         alert("Ingresa los datos correctamente")
-    }else {
+    } else {
         document.getElementById("calendario").style.display = "flex"
         document.getElementById("guardar").style.display = "block"
     }
-
-    
-
 }
+
+function validateEmail() {
+
+    // Get our input reference.
+    var emailField = document.getElementById('email');
+
+    // Define our regular expression.
+    var validEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+
+    // Using test we can check if the text match the pattern
+    if (validEmail.test(emailField.value)) {
+        alert('Email is valid, continue with form submission');
+        return true;
+    } else {
+        alert('Email is invalid, skip form submission');
+        return false;
+    }
+}
+
+function valideKey(evt) {
+
+    // code is the decimal ASCII representation of the pressed key.
+    var code = (evt.which) ? evt.which : evt.keyCode;
+
+    if (code == 8) { // backspace.
+        return true;
+    } else if (code >= 48 && code <= 57) { // is a number.
+        return true;
+    } else { // other keys.
+        return false;
+    }
+}
+
 
 document.getElementById("guardar").addEventListener("click", guarda);
 
@@ -86,23 +117,31 @@ function guarda() {
 
     var dia4 = localStorage.getItem("dia4");
     console.log(localStorage.getItem("dia4"));
-    
 
-    var url = "/controller/cIngresar.php";
-    var data = { 'nombre': nombre, 'apellido': apellido, 'telefono': telefono, 'email': email, 'dia1': dia1, 'dia2': dia2, 'dia3': dia3, 'dia4': dia4 };
 
-    fetch(url, {
+    // var url = ;
+    // var data = ;
+
+    fetch("/controller/cIngresar.php", {
         method: 'POST',
-        body: JSON.stringify(data), // data can be `string` or {object}!
-        headers: { 'Content-Type': 'application/json' }  //input data
+        body: JSON.stringify({
+            'nombre': nombre,
+            'apellido': apellido,
+            'telefono': telefono,
+            'email': email,
+            'dia1': dia1,
+            'dia2': dia2,
+            'dia3': dia3,
+            'dia4': dia4
+        }), // data can be `string` or {object}!
+        // headers: { 'Content-Type': 'application/json' }  //input data
     })
-        .then(res => res.json()).then(response => {
-
-            console.log(response.list);
-            alert(response.list);
-
+        .then(response => response.json())
+        .then(data => {
+            // Mostrar una alerta con la respuesta del servidor
+            alert(data.mensaje);
         })
-        .catch(error => console.error('Error status:', error));
+        .catch(error => console.error(error));
 
 
 
