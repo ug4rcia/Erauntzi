@@ -1,1 +1,70 @@
-/*# sourceMappingURL=cursos.css.map */
+#datos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.nombre {
+  grid-area: 1/1/2/2;
+}
+
+.apellido {
+  grid-area: 1/2/2/3;
+}
+
+.telefono {
+  grid-area: 2/1/3/2;
+}
+
+.email {
+  grid-area: 2/2/3/3;
+}
+
+.oculto {
+  display: none;
+}
+
+#calendario {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.first-day1 {
+  grid-column-start: 4;
+}
+
+.first-day2 {
+  grid-column-start: 6;
+}
+
+.first-day3 {
+  grid-column-start: 5;
+}
+
+.calendar-wrapper {
+  width: 280px;
+}
+
+.weekday {
+  background: #eee;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}/*# sourceMappingURL=cursos.css.map */
