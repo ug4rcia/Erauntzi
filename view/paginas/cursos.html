@@ -104,23 +104,28 @@
 <body>
     <header>
         <nav>
-          <div class="logo">
-            <h1><a href="/index.html">Erauntzi</a></h1>
-          </div>
-          <ul>
-            <li><a href="/index.html">Inicio</a></li>
-            <li><a href="/view/paginas/clases.html">Clases</a></li>
-            <li><a href="/view/paginas/cursos.html">Reservas</a></li>
-            <li><a href="/view/paginas/nosotros.html">Acerca de nosotros</a></li>
-            <li><a href="/view/paginas/contacto.html">Contacto</a></li>
-            <li><a href="/view/paginas/login.html">Admin</a></li>
-          </ul>
+            <div class="logo">
+                <h1><a href="/index.html">Erauntzi</a></h1>
+            </div>
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/view/paginas/clases.html">Clases</a></li>
+                <li><a href="/view/paginas/cursos.html">Reservas</a></li>
+                <li><a href="/view/paginas/nosotros.html">Acerca de nosotros</a></li>
+                <li><a href="/view/paginas/contacto.html">Contacto</a></li>
+                <li><a href="/view/paginas/login.html">Admin</a></li>
+            </ul>
         </nav>
-      </header>
+    </header>
 
     <section class="booking">
         <div class="container">
-            <h1>Reserva tu clase</h1>
+            <div>
+                <h1>Reserva tu clase</h1>
+                <p>Clases: Mayo ,Junio, Julio, Septiembre</p>
+                <!-- <div id="tabla"></div> -->
+            </div>
+
             <form action="/controller/prueba.php" method="POST">
                 <div class="form-group">
                     <label for="name">Nombre:</label>
@@ -140,19 +145,19 @@
                 </div>
                 <div class="form-group">
                     <label for="dia1">Día 1:</label>
-                    <input type="date" id="date" name="dia1" required>
+                    <input type="date" id="date1" name="dia1" required>
                 </div>
                 <div class="form-group">
                     <label for="dia1">Día 2:</label>
-                    <input type="date" id="date" name="dia2" required>
+                    <input type="date" id="date2" name="dia2" required>
                 </div>
                 <div class="form-group">
                     <label for="dia1">Día 3:</label>
-                    <input type="date" id="date" name="dia3" required>
+                    <input type="date" id="date3" name="dia3" required>
                 </div>
                 <div class="form-group">
                     <label for="dia1">Día 4:</label>
-                    <input type="date" id="date" name="dia4" required>
+                    <input type="date" id="date4" name="dia4" required>
                 </div>
                 <button type="submit" class="btn">Reservar</button>
             </form>
@@ -192,11 +197,8 @@
         </div>
     </footer>
 
+    <script src="/view/js/cursos.js"></script>
+
 </body>
 
 </html>
-
-<!-- 
-</body>
-
-</html> -->
