@@ -126,14 +126,16 @@
                 <!-- <div id="tabla"></div> -->
             </div>
 
-            <form action="/controller/prueba.php" method="POST">
+            <!-- action="/controller/prueba.php" method="POST" -->
+
+            <form>
                 <div class="form-group">
                     <label for="name">Nombre:</label>
                     <input type="text" id="name" name="nombre" required>
                 </div>
                 <div class="form-group">
                     <label for="apellido">Apellido:</label>
-                    <input type="text" name="apellido" required>
+                    <input type="text" id="apellido" name="apellido" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email:</label>
@@ -144,22 +146,10 @@
                     <input type="tel" id="phone" name="telefono" required>
                 </div>
                 <div class="form-group">
-                    <label for="dia1">Día 1:</label>
-                    <input type="date" id="date1" name="dia1" required>
+                    <label for="dia1">Selecciona dia:</label>
+                    <input type="date" id="date" name="dia" required>
                 </div>
-                <div class="form-group">
-                    <label for="dia1">Día 2:</label>
-                    <input type="date" id="date2" name="dia2" required>
-                </div>
-                <div class="form-group">
-                    <label for="dia1">Día 3:</label>
-                    <input type="date" id="date3" name="dia3" required>
-                </div>
-                <div class="form-group">
-                    <label for="dia1">Día 4:</label>
-                    <input type="date" id="date4" name="dia4" required>
-                </div>
-                <button type="submit" class="btn">Reservar</button>
+                <button type="submit" id="boton" class="btn">Reservar</button>
             </form>
         </div>
     </section>

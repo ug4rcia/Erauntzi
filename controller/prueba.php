@@ -5,10 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$apellido = $_POST['apellido'];
 	$telefono = $_POST['telefono'];
 	$email = $_POST['email'];
-	$dia1 = $_POST['dia1'];
-	$dia2 = $_POST['dia2'];
-	$dia3 = $_POST['dia3'];
-	$dia4 = $_POST['dia4'];
+	$dia = $_POST['dia'];
 
 	// Conexión a la base de datos
 	$servername = "localhost";
@@ -23,12 +20,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	}
 
 	// Inserción de datos en la base de datos
-	$sql = "INSERT INTO reservas (nombre, apellido, numero, email, dia1, dia2, dia3, dia4)
-	VALUES ('$nombre', '$apellido', '$telefono', '$email', '$dia1', '$dia2', '$dia3', '$dia4')";
+	$sql = "INSERT INTO reservas (nombre, apellido, numero, email, dia)
+	VALUES ('$nombre', '$apellido', '$telefono', '$email', '$dia')";
 
 	if (mysqli_query($conn, $sql)) {
 	    echo "Reserva guardada correctamente";
-        header("Location: /index.html");
+        header("Location: /view/paginas/cursos.html");
 	} else {
 	    echo "Error al guardar la reserva: " . mysqli_error($conn);
 	}

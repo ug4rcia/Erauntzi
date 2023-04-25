@@ -1,7 +1,21 @@
 document.addEventListener("DOMContentLoaded", (event) => {
 
-    tabla();
+    // tabla();
 })
+
+document.getElementById("boton").addEventListener("click",reserva);
+
+function reserva() {
+
+    var nombre = document.getElementById("name").value;
+    var apellido = document.getElementById("apellido").value;
+    var email = document.getElementById("email").value;
+    var telefono = document.getElementById("phone").value;
+    var dia = document.getElementById("date").value;
+
+    console.log(nombre, apellido, email, telefono, dia);
+
+}
 
 function tabla() {
 
@@ -25,10 +39,7 @@ function tabla() {
                     + "<td > " + lista[i].apellido + "</td>"
                     + "<td>" + lista[i].telefono + "</td>"
                     + "<td>" + lista[i].email + " </td>"
-                    + "<td>" + lista[i].dia1 + "</td>"
-                    + "<td>" + lista[i].dia2 + "</td>"
-                    + "<td>" + lista[i].dia3 + "</td>"
-                    + "<td>" + lista[i].dia4 + "</td>"
+                    + "<td>" + lista[i].dia + "</td>"
                     + "</tr>"
             }
             newRow += "</table>";
