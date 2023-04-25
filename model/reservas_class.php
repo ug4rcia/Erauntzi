@@ -6,41 +6,14 @@ class reservas_class{
     public $apellido;
     public $telefono;
     public $email;
-	public $dia1;
-	public $dia2;
-	public $dia3;
-	public $dia4;
+	public $dia;
 
-	public function getDia1() {
-		return $this->dia1;
+	public function getDia() {
+		return $this->dia;
 	}
 
-	public function setDia1($dia1) {
-		$this->$dia1 = $dia1;
-	}
-
-	public function getDia2() {
-		return $this->dia2;
-	}
-
-	public function setDia2($dia2) {
-		$this->$dia2 = $dia2;
-	}
-
-	public function getDia3() {
-		return $this->dia3;
-	}
-
-	public function setDia3($dia3) {
-		$this->$dia3 = $dia3;
-	}
-
-	public function getDia4() {
-		return $this->dia4;
-	}
-
-	public function setDia4($dia4) {
-		$this->$dia4 = $dia4;
+	public function setDia1($dia) {
+		$this->$dia = $dia;
 	}
 
 	public function getNombre() {

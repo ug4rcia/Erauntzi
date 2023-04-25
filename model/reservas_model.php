@@ -42,10 +42,33 @@ class reservas_model extends reservas_class
             $this->apellido = $row['apellido'];
             $this->telefono = $row['numero'];
             $this->email = $row['email'];
-            $this->dia1 = $row['dia1'];
-            $this->dia2 = $row['dia2'];
-            $this->dia3 = $row['dia3'];
-            $this->dia4 = $row['dia4'];
+            $this->dia = $row['dia'];
+
+            array_push($list, get_object_vars($this));
+        }
+        mysqli_free_result($result);
+        $this->CloseConnect();
+        return ($list);
+    }
+
+    public function getListFecha()
+    {
+        
+        $this->OpenConnect();
+        $sql = "SELECT * FROM reservas";
+
+        $result = $this->link->query($sql);
+
+        $list = array();
+
+        while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+
+            // $reserva=new reservas_model(); // self()
+            $this->nombre = $row['nombre'];
+            $this->apellido = $row['apellido'];
+            $this->telefono = $row['numero'];
+            $this->email = $row['email'];
+            $this->dia = $row['dia'];
 
             array_push($list, get_object_vars($this));
         }
@@ -55,23 +78,5 @@ class reservas_model extends reservas_class
     }
 
 
-    public function insertDatos()
-    {
-        $this->OpenConnect();
-
-        $nombre = $this->nombre;
-        $apellido = $this->apellido;
-        $telefono = $this->telefono;
-        $email = $this->email;
-        $dia1 = $this->dia1;
-        $dia2 = $this->dia2;
-        $dia3 = $this->dia3;
-        $dia4 = $this->dia4;
-
-        $sql = "INSERT INTO reservas VALUES ('$nombre', '$apellido', '$telefono', '$email', '$dia1', '$dia2', '$dia3', '$dia4')";
-        
-        $this->link->query($sql);
-
-        $this->CloseConnect();
-    }
+   
 }

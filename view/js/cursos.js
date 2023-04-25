@@ -3,7 +3,22 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // tabla();
 })
 
-document.getElementById("boton").addEventListener("click",reserva);
+
+var dias = document.getElementsByTagName("td");
+
+// Recorrer todos los elementos y agregar un evento de mouseover a cada uno
+for (var i = 0; i < dias.length; i++) {
+    dias[i].addEventListener("mouseover", function () {
+        // Obtener el comentario del atributo de datos
+        var comentario = this.getAttribute("data-comentario");
+        // Mostrar el comentario en el cuadro de información emergente
+        this.querySelector(".comentario").textContent = comentario;
+    });
+}
+
+
+
+document.getElementById("boton").addEventListener("click", reserva);
 
 function reserva() {
 
