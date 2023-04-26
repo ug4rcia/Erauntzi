@@ -73,7 +73,7 @@ class usuario_model extends usuario_class
             $new = new usuario_class();
 
             $new->setusuario($row['usuario']);
-            $new->setNombre($row['contrasena']);
+            $new->setContrasena($row['contrasena']);
 
             array_push($list, get_object_vars($new));
         }
@@ -94,7 +94,7 @@ class usuario_model extends usuario_class
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
         $this->setusuario($row['usuario']);
-        $this->setNombre($row['contrasena']);
+        $this->setContrasena($row['contrasena']);
 
 
         mysqli_free_result($result);

@@ -11,8 +11,28 @@ for (var i = 0; i < dias.length; i++) {
     dias[i].addEventListener("mouseover", function () {
         // Obtener el comentario del atributo de datos
         var comentario = this.getAttribute("data-comentario");
+        console.log(comentario)
+
+        var url = "/controller/verDias.php";
+        var data = { 'dia': comentario };
+
+        fetch(url, {
+            method: 'POST', // or 'POST'
+            body: JSON.stringify(data), // data can be `string` or {object}!
+            headers: { 'Content-Type': 'application/json' }  //input data
+
+        })
+            .then(res => res.json()).then(result => {
+
+                console.log(result.list);
+
+
+                this.querySelector(".comentario").textContent = result.list;
+
+            })
+            .catch(error => console.error('Error status:', error));
         // Mostrar el comentario en el cuadro de información emergente
-        this.querySelector(".comentario").textContent = comentario;
+
     });
 }
 
