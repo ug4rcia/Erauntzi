@@ -1,17 +1,27 @@
 <?php
 
-include_once ("../model/reservas_model.php");
+// Detalles de la conexión a la base de datos
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "erauntzi";
 
-$data = json_decode(file_get_contents("php://input"), true);
+// Crear la conexión a la base de datos
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
-$dia = $data['dia'];
+// Verificar si la conexión fue exitosa
+if (!$conn) {
+    die("La conexión a la base de datos falló: " . mysqli_connect_error());
+}
 
-$reserva= new reservas_model();
-$reserva->setDia1($dia);
+$valor = json_decode(file_get_contents("php://input"), true)["dia"];
 
-$response=array();
+// Realiza la consulta SQL con el valor recibido desde JavaScript
+$sql = "SELECT COUNT(*) FROM reservas WHERE dia = '$valor'";
+$resultado = mysqli_query($conn, $sql);
 
-$response['list']=$reserva->getListFecha();
+// Obtiene el valor Count
+$count = mysqli_fetch_array($resultado)[0];
 
-echo json_encode($response);
-unset ($response);
+// Retorna el valor Count en formato JSON
+echo json_encode($count);

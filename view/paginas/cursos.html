@@ -6,33 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservas | Escuela de Surf</title>
     <link rel="stylesheet" href="/view/css/cursos.css">
-
-    <style>
-        .tooltip {
-            position: relative;
-            display: inline-block;
-        }
-
-        .tooltip:hover .tooltiptext {
-            visibility: visible;
-        }
-
-        .tooltiptext {
-            visibility: hidden;
-            background-color: black;
-            color: #fff;
-            text-align: center;
-            border-radius: 6px;
-            padding: 5px;
-            position: absolute;
-            z-index: 1;
-            bottom: 125%;
-            left: 50%;
-            margin-left: -60px;
-            opacity: 0.8;
-            transition: visibility 0s, opacity 0.5s;
-        }
-    </style>
 </head>
 
 <body>
@@ -79,20 +52,18 @@
                     <label for="phone">Teléfono:</label>
                     <input type="tel" id="phone" name="telefono" required>
                 </div>
-                <div class="form-group">
-                    <label for="dia1">Selecciona dia:</label>
-                    <select name="mes" id="mes">
-                        <option value="1">Mayo</option>
-                        <option value="2">Junio</option>
-                        <option value="3">Julio</option>
-                        <option value="4">Septiembre</option>
+                <div class="month-selector form-group">
+                    <label for="month">Selecciona un mes:</label>
+                    <select id="month">
+                        <option value="" selected disabled>SELECIONA UN MES</option>
+                        <option value="5">Mayo</option>
+                        <option value="6">Junio</option>
+                        <option value="7">Julio</option>
+                        <option value="9">Septiembre</option>
                     </select>
                 </div>
-                <!-- <div class="tooltip">
-                    <button>Botón</button>
-                    <span class="tooltiptext">Este es un comentario personalizado.</span>
-                </div> -->
 
+                <div id="calendar" class="form-group"></div>
 
                 <table>
                     <thead>
@@ -114,22 +85,22 @@
                             <td data-comentario="2023-04-26">1
                                 <div class="comentario"></div>
                             </td>
-                            <td data-comentario="Este es un comentario para el día 2">2
+                            <td data-comentario="2023-04-02">2
                                 <div class="comentario"></div>
                             </td>
-                            <td data-comentario="Este es un comentario para el día 3">3
+                            <td data-comentario="2023-04-03">3
                                 <div class="comentario"></div>
                             </td>
-                            <td data-comentario="Este es un comentario para el día 4">4
+                            <td data-comentario="2023-04-04">4
                                 <div class="comentario"></div>
                             </td>
-                            <td data-comentario="Este es un comentario para el día 5">5
+                            <td data-comentario="2023-04-05">5
                                 <div class="comentario"></div>
                             </td>
-                            <td data-comentario="Este es un comentario para el día 6">6
+                            <td data-comentario="2023-04-06">6
                                 <div class="comentario"></div>
                             </td>
-                            <td data-comentario="Este es un comentario para el día 7">7
+                            <td data-comentario="2023-04-07">7
                                 <div class="comentario"></div>
                             </td>
                             <!-- Continuar con el resto de los días del mes -->
@@ -145,6 +116,22 @@
         </div>
     </section>
 
+    <h1>Calendario por mes</h1>
+    <select id="select-mes">
+      <option value="0">Enero</option>
+      <option value="1">Febrero</option>
+      <option value="2">Marzo</option>
+      <option value="3">Abril</option>
+      <option value="4">Mayo</option>
+      <option value="5">Junio</option>
+      <option value="6">Julio</option>
+      <option value="7">Agosto</option>
+      <option value="8">Septiembre</option>
+      <option value="9">Octubre</option>
+      <option value="10">Noviembre</option>
+      <option value="11">Diciembre</option>
+    </select>
+    <div id="calendario"></div>
     <footer>
         <div class="container">
             <div class="row">

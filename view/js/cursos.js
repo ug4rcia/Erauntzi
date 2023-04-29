@@ -4,40 +4,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
 })
 
 
-var dias = document.getElementsByTagName("td");
-
-// Recorrer todos los elementos y agregar un evento de mouseover a cada uno
-for (var i = 0; i < dias.length; i++) {
-    dias[i].addEventListener("mouseover", function () {
-        // Obtener el comentario del atributo de datos
-        var comentario = this.getAttribute("data-comentario");
-        console.log(comentario)
-
-        var url = "/controller/verDias.php";
-        var data = { 'dia': comentario };
-
-        fetch(url, {
-            method: 'POST', // or 'POST'
-            body: JSON.stringify(data), // data can be `string` or {object}!
-            headers: { 'Content-Type': 'application/json' }  //input data
-
-        })
-            .then(res => res.json()).then(result => {
-
-                console.log(result.list);
-
-
-                this.querySelector(".comentario").textContent = result.list;
-
-            })
-            .catch(error => console.error('Error status:', error));
-        // Mostrar el comentario en el cuadro de información emergente
-
-    });
-}
-
-
-
 document.getElementById("boton").addEventListener("click", reserva);
 
 function reserva() {
@@ -86,4 +52,92 @@ function tabla() {
 
 
 
+}
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+// const monthNames = [
+//     "Mayo",
+//     "Junio",
+//     "Julio",
+//     "Septiembre",
+// ];
+
+const calendar = document.getElementById("calendar");
+const monthSelector = document.getElementById("month");
+
+monthSelector.addEventListener("change", () => {
+    const selectedMonth = parseInt(monthSelector.value);
+    const selectedDate = new Date();
+    selectedDate.setMonth(selectedMonth);
+    selectedDate.setDate(1);
+
+    const currentYear = selectedDate.getFullYear();
+    const currentMonth = selectedDate.getMonth();
+
+    // const monthName = monthNames[currentMonth];
+
+    const firstDay = new Date(currentYear, currentMonth, 1);
+    const lastDay = new Date(currentYear, currentMonth + 1, 0);
+
+    const daysInMonth = lastDay.getDate();
+    const startingDay = firstDay.getDay();
+
+    calendar.innerHTML = "";
+
+    for (let i = 1; i < startingDay; i++) {
+        const dayElement = document.createElement("div");
+        dayElement.classList.add("day");
+        calendar.appendChild(dayElement);
+    }
+
+    for (let i = 1; i <= daysInMonth; i++) {
+        const dayElement = document.createElement("div");
+        dayElement.classList.add("day");
+        dayElement.innerHTML = `<div class='comentario'><div>`;
+        if (i === new Date().getDate() && currentMonth === new Date().getMonth()) {
+            dayElement.classList.add("today");
+        }
+        dayElement.textContent = i;
+        calendar.appendChild(dayElement);
+    }
+});
+
+
+
+
+var dias = document.getElementsByTagName("td");
+
+// Recorrer todos los elementos y agregar un evento de mouseover a cada uno
+for (var i = 0; i < dias.length; i++) {
+    dias[i].addEventListener("mouseover", function () {
+        // Obtener el comentario del atributo de datos
+        var comentario = this.getAttribute("data-comentario");
+        console.log(comentario)
+
+        var url = "/controller/verDias.php";
+        var data = { 'dia': comentario };
+
+        fetch(url, {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                console.log(data);
+
+                document.querySelector(".comentario").textContent = data;
+
+
+            })
+            .catch(function (error) {
+                console.error(error);
+            });
+    });
 }

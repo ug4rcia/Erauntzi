@@ -51,28 +51,28 @@ class reservas_model extends reservas_class
         return ($list);
     }
 
-    public function getListFecha()
-    {
+    // public function getListFecha()
+    // {
 
-        $this->OpenConnect();
+    //     $this->OpenConnect();
 
-        $dia = $this->dia;
+    //     $dia = $this->dia;
 
-        $sql = "SELECT COUNT(dia) as dias FROM reservas WHERE dia='$dia'";
+    //     $sql = "SELECT COUNT(dia) as dias FROM reservas WHERE dia='$dia'";
 
-        // $result = $this->link->query($sql);
-        $result = mysqli_query($this->link, $sql);
-        $fila = mysqli_fetch_assoc($result);
-        $valor = $fila['dias'];
-        var_dump("result");
-        var_dump($result);
-        var_dump("fila");
-        var_dump($fila);
-        var_dump("valor");
-        var_dump($valor);
+    //     // $result = $this->link->query($sql);
+    //     $result = mysqli_query($this->link, $sql);
+    //     $fila = mysqli_fetch_assoc($result);
+    //     $valor = $fila['dias'];
+    //     // echo "result ";
+    //     // var_dump($result);
+    //     // echo"fila ";
+    //     // var_dump($fila);
+    //     // echo"valor ";
+    //     // var_dump($valor);
 
-        // mysqli_free_result($result);
-        $this->CloseConnect();
-        return $valor;
-    }
+    //     // mysqli_free_result($valor);
+    //     $this->CloseConnect();
+    //     return $valor;
+    // }
 }
