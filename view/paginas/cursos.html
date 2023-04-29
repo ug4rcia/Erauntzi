@@ -33,9 +33,9 @@
                 <!-- <div id="tabla"></div> -->
             </div>
 
-            <!-- action="/controller/prueba.php" method="POST" -->
+            <!--  -->
 
-            <form>
+            <form action="/controller/prueba.php" method="POST">
                 <div class="form-group">
                     <label for="name">Nombre:</label>
                     <input type="text" id="name" name="nombre" required>
@@ -52,23 +52,25 @@
                     <label for="phone">Teléfono:</label>
                     <input type="tel" id="phone" name="telefono" required>
                 </div>
+                <div class="form-group">
+                    <label for="dia">dia:</label>
+                    <input type="text" id="dia" name="dia" required>
+                </div>
                 <div class="month-selector form-group">
                     <label for="month">Selecciona un mes:</label>
                     <select id="month">
                         <option value="" selected disabled>SELECIONA UN MES</option>
-                        <option value="5">Mayo</option>
-                        <option value="6">Junio</option>
-                        <option value="7">Julio</option>
-                        <option value="9">Septiembre</option>
+                        <option value="1">Mayo</option>
+                        <option value="2">Junio</option>
+                        <option value="3">Julio</option>
+                        <option value="4">Septiembre</option>
                     </select>
                 </div>
 
-                <div id="calendar" class="form-group"></div>
-
-                <table>
+                <table id="mayo" class="form-group" style="display: none;">
                     <thead>
                         <tr>
-                            <th colspan="7">Abril 2023</th>
+                            <th colspan="7">Mayo 2023</th>
                         </tr>
                         <tr>
                             <th>L</th>
@@ -82,56 +84,521 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td data-comentario="2023-04-26">1
+                            <td data-comentario="2023-0 -">1
                                 <div class="comentario"></div>
                             </td>
-                            <td data-comentario="2023-04-02">2
+                            <td data-comentario="2023-0 -">2
                                 <div class="comentario"></div>
                             </td>
-                            <td data-comentario="2023-04-03">3
+                            <td data-comentario="2023-0 -">3
                                 <div class="comentario"></div>
                             </td>
-                            <td data-comentario="2023-04-04">4
+                            <td data-comentario="2023-0 -">4
                                 <div class="comentario"></div>
                             </td>
-                            <td data-comentario="2023-04-05">5
+                            <td data-comentario="2023-0 -">5
                                 <div class="comentario"></div>
                             </td>
-                            <td data-comentario="2023-04-06">6
+                            <td data-comentario="2023-0 -">6
                                 <div class="comentario"></div>
                             </td>
-                            <td data-comentario="2023-04-07">7
+                            <td data-comentario="2023-0 -">7
                                 <div class="comentario"></div>
                             </td>
                             <!-- Continuar con el resto de los días del mes -->
                         </tr>
                         <!-- Continuar con las demás filas de la tabla -->
+                        <tr>
+                            <td data-comentario="2023-0 -">8
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">9
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">10
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">11
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">12
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">13
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">14
+                                <div class="comentario"></div>
+                            </td>
+                            <!-- Continuar con el resto de los días del mes -->
+                        </tr>
+                        <tr>
+                            <td data-comentario="2023-0 -">15
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">16
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">17
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">18
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">19
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">20
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">21
+                                <div class="comentario"></div>
+                            </td>
+                            <!-- Continuar con el resto de los días del mes -->
+                        </tr>
+                        <tr>
+                            <td data-comentario="2023-0 -">22
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">23
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">24
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">25
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">26
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">27
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">28
+                                <div class="comentario"></div>
+                            </td>
+                            <!-- Continuar con el resto de los días del mes -->
+                        </tr>
+                        <tr>
+                            <td data-comentario="2023-0 -">29
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">30
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">31
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -"></td>
+                            <td data-comentario="2023-0 -"></td>
+                            <td data-comentario="2023-0 -"></td>
+                            <td data-comentario="2023-0 -"></td>
+                            <!-- Continuar con el resto de los días del mes -->
+                        </tr>
                     </tbody>
                 </table>
 
 
+                <table id="junio" class="form-group" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th colspan="7">Junio 2023</th>
+                        </tr>
+                        <tr>
+                            <th>L</th>
+                            <th>M</th>
+                            <th>M</th>
+                            <th>J</th>
+                            <th>V</th>
+                            <th>S</th>
+                            <th>D</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td data-comentario="2023-0 -">1
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">2
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">3
+                                <div class="comentario"></div>
+                            </td>
+                            <!-- Continuar con el resto de los días del mes -->
+                        </tr>
+                        <!-- Continuar con las demás filas de la tabla -->
+                        <tr>
+                            <td data-comentario="2023-0 -">4
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">5
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">6
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">7
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">8
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">9
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">10
+                                <div class="comentario"></div>
+                            </td>
+                            <!-- Continuar con el resto de los días del mes -->
+                        </tr>
+                        <tr>
+                            <td data-comentario="2023-0 -">11
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">12
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">13
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">14
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">15
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">16
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">17
+                                <div class="comentario"></div>
+                            </td>
+                            <!-- Continuar con el resto de los días del mes -->
+                        </tr>
+                        <tr>
+                            <td data-comentario="2023-0 -">18
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">19
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">20
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">21
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">22
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">23
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">24
+                                <div class="comentario"></div>
+                            </td>
+                            <!-- Continuar con el resto de los días del mes -->
+                        </tr>
+                        <tr>
+                            <td data-comentario="2023-0 -">25
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">26
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">27
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">28
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">29
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">30
+                                <div class="comentario"></div>
+                            </td>
+                            <td></td>
+                            <!-- Continuar con el resto de los días del mes -->
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table id="julio" class="form-group" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th colspan="7">Julio 2023</th>
+                        </tr>
+                        <tr>
+                            <th>L</th>
+                            <th>M</th>
+                            <th>M</th>
+                            <th>J</th>
+                            <th>V</th>
+                            <th>S</th>
+                            <th>D</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td data-comentario="2023-0 -">1
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">2
+                                <div class="comentario"></div>
+                            </td>
+                            <!-- Continuar con el resto de los días del mes -->
+                        </tr>
+                        <!-- Continuar con las demás filas de la tabla -->
+                        <tr>
+                            <td data-comentario="2023-0 -">3
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">4
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">5
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">6
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">7
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">8
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">9
+                                <div class="comentario"></div>
+                            </td>
+                            <!-- Continuar con el resto de los días del mes -->
+                        </tr>
+                        <tr>
+                            <td data-comentario="2023-0 -">10
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">11
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">12
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">13
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">14
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">15
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">16
+                                <div class="comentario"></div>
+                            </td>
+                            <!-- Continuar con el resto de los días del mes -->
+                        </tr>
+                        <tr>
+                            <td data-comentario="2023-0 -">17
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">18
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">19
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">20
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">21
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">22
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">23
+                                <div class="comentario"></div>
+                            </td>
+                            <!-- Continuar con el resto de los días del mes -->
+                        </tr>
+                        <tr>
+                            <td data-comentario="2023-0 -">24
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">25
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">26
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">27</td>
+                            <td data-comentario="2023-0 -">28</td>
+                            <td data-comentario="2023-0 -">29</td>
+                            <td data-comentario="2023-0 -">30</td>
+                            <!-- Continuar con el resto de los días del mes -->
+                        </tr>
+                        <tr>
+                            <td data-comentario="2023-0 -">31
+                                <div class="comentario"></div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <!-- Continuar con el resto de los días del mes -->
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table id="septiembre" class="form-group" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th colspan="7">Septiembre 2023</th>
+                        </tr>
+                        <tr>
+                            <th>L</th>
+                            <th>M</th>
+                            <th>M</th>
+                            <th>J</th>
+                            <th>V</th>
+                            <th>S</th>
+                            <th>D</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td data-comentario="2023-0 -">1
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">2
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">3
+                                <div class="comentario"></div>
+                            </td>
+                            <!-- Continuar con el resto de los días del mes -->
+                        </tr>
+                        <!-- Continuar con las demás filas de la tabla -->
+                        <tr>
+                            <td data-comentario="2023-0 -">4
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">5
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">6
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">7
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">8
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">9
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">10
+                                <div class="comentario"></div>
+                            </td>
+                            <!-- Continuar con el resto de los días del mes -->
+                        </tr>
+                        <tr>
+                            <td data-comentario="2023-0 -">11
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">12
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">13
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">14
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">15
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">16
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">17
+                                <div class="comentario"></div>
+                            </td>
+                            <!-- Continuar con el resto de los días del mes -->
+                        </tr>
+                        <tr>
+                            <td data-comentario="2023-0 -">18
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">19
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">20
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">21
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">22
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">23
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">24
+                                <div class="comentario"></div>
+                            </td>
+                            <!-- Continuar con el resto de los días del mes -->
+                        </tr>
+                        <tr>
+                            <td data-comentario="2023-0 -">25
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">26
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">27
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">28
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">29
+                                <div class="comentario"></div>
+                            </td>
+                            <td data-comentario="2023-0 -">30
+                                <div class="comentario"></div>
+                            </td>
+                            <td></td>
+                            <!-- Continuar con el resto de los días del mes -->
+                        </tr>
+                    </tbody>
+                </table>
 
                 <button type="submit" id="boton" class="btn">Reservar</button>
             </form>
         </div>
     </section>
 
-    <h1>Calendario por mes</h1>
-    <select id="select-mes">
-      <option value="0">Enero</option>
-      <option value="1">Febrero</option>
-      <option value="2">Marzo</option>
-      <option value="3">Abril</option>
-      <option value="4">Mayo</option>
-      <option value="5">Junio</option>
-      <option value="6">Julio</option>
-      <option value="7">Agosto</option>
-      <option value="8">Septiembre</option>
-      <option value="9">Octubre</option>
-      <option value="10">Noviembre</option>
-      <option value="11">Diciembre</option>
-    </select>
-    <div id="calendario"></div>
     <footer>
         <div class="container">
             <div class="row">

@@ -145,37 +145,6 @@ td:hover .comentario {
     line-height: 1.5;
     text-align: left;
 }
-
-
-
-
-
-
-
-
-
-.month-selector {
-    margin-bottom: 20px;
-}
-
-#calendar {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#calendar .day {
-    width: calc(100% / 7);
-    padding: 10px;
-    box-sizing: border-box;
-    text-align: center;
-    border: 1px solid #ccc;
-}
-
-#calendar .today {
-    background-color: #ccc;
-}
-
-
 //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////
 .btn {

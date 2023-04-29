@@ -12,7 +12,7 @@ function reserva() {
     var apellido = document.getElementById("apellido").value;
     var email = document.getElementById("email").value;
     var telefono = document.getElementById("phone").value;
-    var dia = document.getElementById("date").value;
+    var dia = document.getElementById("dia").value;
 
     console.log(nombre, apellido, email, telefono, dia);
 
@@ -57,57 +57,8 @@ function tabla() {
 ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////
-// const monthNames = [
-//     "Mayo",
-//     "Junio",
-//     "Julio",
-//     "Septiembre",
-// ];
 
-const calendar = document.getElementById("calendar");
-const monthSelector = document.getElementById("month");
-
-monthSelector.addEventListener("change", () => {
-    const selectedMonth = parseInt(monthSelector.value);
-    const selectedDate = new Date();
-    selectedDate.setMonth(selectedMonth);
-    selectedDate.setDate(1);
-
-    const currentYear = selectedDate.getFullYear();
-    const currentMonth = selectedDate.getMonth();
-
-    // const monthName = monthNames[currentMonth];
-
-    const firstDay = new Date(currentYear, currentMonth, 1);
-    const lastDay = new Date(currentYear, currentMonth + 1, 0);
-
-    const daysInMonth = lastDay.getDate();
-    const startingDay = firstDay.getDay();
-
-    calendar.innerHTML = "";
-
-    for (let i = 1; i < startingDay; i++) {
-        const dayElement = document.createElement("div");
-        dayElement.classList.add("day");
-        calendar.appendChild(dayElement);
-    }
-
-    for (let i = 1; i <= daysInMonth; i++) {
-        const dayElement = document.createElement("div");
-        dayElement.classList.add("day");
-        dayElement.innerHTML = `<div class='comentario'><div>`;
-        if (i === new Date().getDate() && currentMonth === new Date().getMonth()) {
-            dayElement.classList.add("today");
-        }
-        dayElement.textContent = i;
-        calendar.appendChild(dayElement);
-    }
-});
-
-
-
-
-var dias = document.getElementsByTagName("td");
+var dias = document.querySelectorAll("td");
 
 // Recorrer todos los elementos y agregar un evento de mouseover a cada uno
 for (var i = 0; i < dias.length; i++) {
@@ -140,4 +91,52 @@ for (var i = 0; i < dias.length; i++) {
                 console.error(error);
             });
     });
+}
+
+
+document.getElementById("month").addEventListener("change", ensenarMes)
+
+function ensenarMes() {
+    var mes = document.getElementById("month").value;
+    console.log(mes);
+
+    if (mes == 1) {
+        document.getElementById("mayo").style.display = "block";
+
+        document.getElementById("junio").style.display = "none";
+
+        document.getElementById("julio").style.display = "none";
+
+        document.getElementById("septiembre").style.display = "none";
+
+    } else if (mes == 2) {
+
+        document.getElementById("mayo").style.display = "none";
+
+        document.getElementById("junio").style.display = "block";
+
+        document.getElementById("julio").style.display = "none";
+
+        document.getElementById("septiembre").style.display = "none";
+
+    } else if (mes == 3) {
+
+        document.getElementById("mayo").style.display = "none";
+
+        document.getElementById("junio").style.display = "none";
+
+        document.getElementById("julio").style.display = "block";
+
+        document.getElementById("septiembre").style.display = "none";
+
+    } else {
+
+        document.getElementById("mayo").style.display = "none";
+
+        document.getElementById("junio").style.display = "none";
+
+        document.getElementById("julio").style.display = "none";
+
+        document.getElementById("septiembre").style.display = "block";
+    }
 }
