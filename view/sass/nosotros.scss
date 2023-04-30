@@ -69,6 +69,8 @@ nav ul li a:hover {
 /* Estilos para la sección "Acerca de nosotros" */
 .about {
     padding: 50px 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .about h2 {
@@ -80,6 +82,16 @@ nav ul li a:hover {
     font-size: 18px;
     line-height: 1.5;
     margin: 0 0 30px;
+}
+
+.container2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -94,6 +106,7 @@ footer {
     margin: 0 auto;
     text-align: center;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -142,8 +155,12 @@ ul li i {
     color: #00c7ff;
 }
 
+.link{
+    text-decoration: none;
+    color: white;
+}
+
 .social-media li {
-    display: inline-block;
     margin-right: 20px;
 }
 
@@ -158,6 +175,10 @@ ul li i {
     border-radius: 50%;
     background-color: #00c7ff;
     transition: all 0.3s ease;
+}
+
+.social-media img{
+    width: 100%;
 }
 
 .social-media a:hover {

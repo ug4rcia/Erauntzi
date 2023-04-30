@@ -85,6 +85,11 @@ nav ul li a:hover {
   margin-bottom: 20px;
 }
 
+.link{
+  text-decoration: none;
+  color: black;
+}
+
 .btn {
   display: inline-block;
   background-color: #F9A11E;
@@ -106,6 +111,13 @@ nav ul li a:hover {
   padding: 50px 0;
 }
 
+.instr img{
+  // background-image: url("/view/img/040.JPG");
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: center;
+}
+
 .services h3 {
   text-align: center;
   margin-bottom: 50px;
@@ -121,7 +133,7 @@ nav ul li a:hover {
 }
 
 .service {
-  width: 300px;
+  width: 500px;
   text-align: center;
   margin-bottom: 50px;
 }
