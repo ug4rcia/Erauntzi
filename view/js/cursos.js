@@ -83,7 +83,7 @@ for (var i = 0; i < dias.length; i++) {
             .then(function (data) {
                 console.log(data);
 
-                document.querySelector(".comentario").textContent = data;
+                document.querySelector(".comentario").textContent = "Quedan " + data + " plazas para reservas";
 
 
             })
