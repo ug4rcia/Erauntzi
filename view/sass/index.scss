@@ -112,12 +112,12 @@ nav ul li a:hover {
   padding: 50px 0;
 }
 
-.instr img{
-  // background-image: url("/view/img/040.JPG");
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // background-position: center;
-}
+// .instr img{
+//   // background-image: url("/view/img/040.JPG");
+//   // background-repeat: no-repeat;
+//   // background-size: cover;
+//   // background-position: center;
+// }
 
 .services h3 {
   text-align: center;
@@ -223,9 +223,7 @@ ul li i {
   font-size: 18px;
   color: #00c7ff;
 }
-
 .social-media li {
-  display: inline-block;
   margin-right: 20px;
 }
 
@@ -238,8 +236,12 @@ ul li i {
   font-size: 20px;
   color: #ffffff;
   border-radius: 50%;
-  background-color: #00c7ff;
+  // background-color: #00c7ff;
   transition: all 0.3s ease;
+}
+
+.social-media img{
+  width: 100%;
 }
 
 .social-media a:hover {
