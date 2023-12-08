@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+}
+
+.servicios {
+    background-color: #008fc3;
+    padding-top: 90px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px;
+}
+
+.surf {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.surf h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.servsurf {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.servsurf div {
+    width: 35%;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.servsurf div img {
+    width: 500px;
+    height: 400px;
+}
+
+.servsurf div h3 {
+    margin: 10px 0;
+    font-size: 32px;
+}
+
+.servsurf div p {
+    margin: 10px 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.colonias {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 1PX solid black;
+    padding-top: 10px;
+}
+
+.colonias h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.servnosurf {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.colonia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.colonia img {
+    width: 500px;
+    height: 400px;
+}
+
+.colonia h3 {
+    font-size: 38px;
+    margin: 10px 0;
+}
+
+.colonia p {
+    width: 50%;
+    font-size: 24px;
+    text-align: center;
+}
+
+.colonia p:last-of-type{
+    margin-top: 10px;
+}
+
+.colonia p:last-of-type span{
+    margin-left: 90px;
+}
+
+footer{
+    margin-top: 0
+}
